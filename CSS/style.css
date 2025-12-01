@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Class CenterElement */
+.Center-element {
+    text-align: center;
+}
+
+/* Style NavBar */
+.Navbar {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(231, 230, 230);
+    padding: 10px 100px;
+}
+
+.logo {
+    display: inline-block;
+    width: 400px;
+}
+
+.nav-logo {
+    float: left;
+    background-color: blueviolet;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.list {
+    float: right;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.link-list li {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 20px;
+}
+
+.link-list li a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+    color: black;
+}
+
+.link-list li .active {
+    color: blueviolet;
+}
+
+.link-list li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    border-radius: 10px;
+    background-color: blueviolet;
+    transition: 0.3s ease;
+}
+
+.list ul li a:hover {
+    color: blueviolet;
+}
+
+.list ul li a:hover::after,
+.list a.active::after {
+    color: blueviolet;
+    width: 100%;
+}
+
+/* Clear Fix */
+.clear {
+    clear: both;
+}
+
+/* Style Main Section */
+.main-section {
+    width: 100%;
+    height: 100vh;
+    padding: 0 100px;
+}
+
+.drone-image {
+    width: 500px;
+    height: auto;
+    border: 3px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    float: left;
+    position: relative;
+    margin-top: 100px;
+}
+
+.drone-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.Image-offer {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.Pro-color {
+    color: blueviolet;
+}
+
+.main-content {
+    float: right;
+    width: 45%;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.content {
+    padding: 5px 10px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 20px;
+}
+
+.main-article {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.h2-style {
+    font-size: 40px;
+}
+
+.main-article p {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.main-article strong {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.article-offer {
+    color: red;
+    background-color: rgb(246, 138, 138);
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+.Add-to-cart {
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    display: block;
+    width: 100%;
+    transition: 1s ease;
+}
+
+.Add-to-wishlist {
+    background-color: white;
+    color: blueviolet;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid gray;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    transition: 1s ease;
+}
+
+.Add-to-cart span,
+.Add-to-wishlist span {
+    font-size: 16px;
+}
+
+.Add-to-cart:hover,
+.Add-to-wishlist:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+/* Style Section Setup */
+.section-setup {
+    width: 100%;
+    height: 70vh;
+    background-color: rgb(235, 234, 234);
+}
+
+.all-card {
+    margin-left: 200px;
+}
+
+.section-setup-card {
+    width: 19%;
+    height: auto;
+    display: inline-block;
+    background-color: white;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin: 15px 0 0 15px;
+}
+
+.section-setup-card figure {
+    position: relative;
+}
+
+.Accessory,
+.Essential,
+.Power,
+.Safety {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.Accessory {
+    background-color: rgb(2, 150, 150);
+}
+
+.Essential {
+    background-color: rgb(55, 163, 55);
+}
+
+.Power {
+    background-color: rgb(16, 216, 216);
+}
+
+.Safety {
+    background-color: orange;
+}
+
+.Button-card {
+    background-color: blueviolet;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: none;
+    margin: 5px 0 0 60px;
+    cursor: pointer;
+}
+
+.section-setup-card figure img {
+    width: 100%;
+    transition: 0.5s ease;
+    border-radius: 10px;
+}
+
+.section-setup-card:hover figure img {
+    transform: scale(1.05);
+}
+
+.button-section {
+    color: blueviolet;
+    background-color: white;
+    border: 2px solid blueviolet;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 20px 0 40px 0;
+    transition: 0.5s ease;
+}
+
+.button-section:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+/* Style Section Customers */
+.section-customers {
+    width: 100%;
+    height: 120vh;
+    padding: 0 100px;
+    margin-bottom: 30px;
+}
+
+.customers {
+    float: right;
+    width: 50%;
+}
+
+.avatar {
+    width: 100%;
+    padding: 15px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.left {
+    float: left;
+}
+
+.left .avatar-image {
+    float: left;
+    margin-right: 20px;
+}
+
+.header {
+    float: right;
+}
+
+.avatar-image img {
+    border-radius: 50%;
+}
+
+.Verified {
+    display: block;
+    background-color: rgb(221, 185, 255);
+    color: blueviolet;
+    padding: 3px;
+    border-radius: 20px;
+}
+
+.right {
+    float: right;
+}
+
+.avatar article {
+    margin-top: 10px;
+}
+
+.button-customers {
+    border: 2px solid blueviolet;
+    background-color: blueviolet;
+    color: white;
+    padding: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.button-customers:hover {
+    color: blueviolet;
+    background-color: white;
+}
+
+.stars {
+    float: left;
+    padding: 20px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    width: 30%;
+    position: sticky;
+    top: 85px;
+}
+
+.yellow-star{
+    display: inline-block;
+}
+
+.rating {
+    margin: 10px 0;
+}
+
+.rating-star {
+    float: left;
+}
+
+.percent {
+    float: right;
+}
+
+.bar {
+    width: 80%;
+    display: inline-block;
+    height: 20px;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+}
+
+.five-star {
+    width: 78%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 20px;
+}
+
+.four-star {
+    width: 15%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 20px;
+}
+
+.three-star {
+    width: 5%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 20px;
+}
+
+.two-star {
+    width: 1.5%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 20px;
+}
+
+.one-star {
+    width: 0.5%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 20px;
+}
+
+.Quality {
+    display: block;
+    font-size: 20px;
+}
+
+/* Style Footer */
+footer {
+    height: 50vh;
+    background-color: rgb(26, 26, 80);
+    padding: 100px;
+}
+
+.footer-logo {
+    width: 30%;
+    float: left;
+}
+
+.text-footer {
+    color: white;
+}
+
+.footer-links {
+    width: 60%;
+    float: right;
+}
+
+.column-links {
+    display: inline-block;
+    width: 30%;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.column-links h3 {
+    color: white;
+}
